@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: >
   python3.8
 
-  Sample SAM Template for lamduh
+  Sample SAM Template for producer-app
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:

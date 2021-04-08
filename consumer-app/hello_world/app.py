@@ -109,7 +109,7 @@ def get_comments(queries):
         request = requests.get(url)
         json_response = request.json()['data'][0]
         comments.append(json_response['body'])
-    df = pd.DataFrame({"queries": queries, "comments": queries})
+    df = pd.DataFrame({"queries": queries, "comments": comments})
     return df
 
 
@@ -189,4 +189,4 @@ def lambda_handler(event, context):
     LOG.info(f"Sentiment from reddit comments: {df.to_dict()}")
 
     # Write result to S3
-    write_s3(df=df, bucket="reddit-sentiment", name='_'.join(queries))
+    write_s3(df=df, bucket="reddit-sentiment-lambda", name='_'.join(queries))

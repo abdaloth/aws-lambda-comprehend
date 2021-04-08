@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "producer-stack"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-42enzysfg9oo"
+s3_prefix = "producer-stack"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=532781806828.dkr.ecr.us-east-1.amazonaws.com/reddit-producer"]
